@@ -351,3 +351,75 @@ footer {
     height: 20px;
     margin-right: 8px; /* Adiciona um pequeno espaço à direita da imagem */
 }
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 992px) {
+  /* Alinha conteúdo em coluna e centraliza texto para melhor leitura */
+  .excelencia-container,
+  .ciclos-content,
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Garante que imagens preencham a largura total de seus containers */
+  .excelencia-img,
+  .ciclos-img {
+    max-width: 100%;
+  }
+
+  /* Ajusta a ordem para que a imagem e o texto se alternem verticalmente */
+  .ciclos-content:nth-child(even) {
+    flex-direction: column;
+  }
+}
+
+/* Telas de celular e menores (até 768px) */
+@media (max-width: 768px) {
+  /* Estilos Gerais */
+  .excelencia,
+  .ciclos {
+    padding: 40px 20px; /* Reduz padding para ocupar melhor a tela */
+  }
+
+  /* Header */
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav {
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+    padding: 9px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    gap: 20px;
+  }
+}
